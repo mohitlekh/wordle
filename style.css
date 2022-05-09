@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+*{
+    color: #454;
+}
+body{
+    position: relative;
+    width: auto;
+    height: 90vh;
+    background: #1D1F25;
+    border-radius: 60px;
+}
+
+.game-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 0px;
+}
+.title-wordle{
+    /* Jamie’s wordle */
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 65px;
+text-align: center;
+text-transform: uppercase;
+
+color: #cfd6dd;
+margin-top: 20px;
+}
+
+
+
+.key-container{
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-container button{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+width: 50px;
+border-radius: 20px;
+}
+.key-container button:nth-child(20),
+.key-container button:nth-child(28){
+    width: 82px;
+}
+.block-container div {
+    display: flex;
+}
+.block-container .block {
+    width: 62px;
+    height: 62px;
+    border: 2px solid#3a3a3c;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+.block.flip {
+    animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.grey-overlay {
+    background-color: #3a3a3c !important;
+    border:none !important;
+}
+.yellow-overlay {
+    background-color: #b59f3a !important;
+    border:none !important;
+}
+
+.green-overlay {
+    background-color: #538d4e !important;
+    border:none !important;
+}
+.date-container{
+    color: rgb(255, 255, 255)!important;
+    font-size: 15px;
+    font-weight: 300;
+
+}
+.message{
+    color: azure;
+}
